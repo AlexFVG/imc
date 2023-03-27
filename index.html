@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+
+<body>
+    <h1 class="titulo">I M C - índice De Massa Corporal</h1>
+
+
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <article>
+
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" name="peso">
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <label for="altura"> Altura (metros, centímetros)</label>
+            <input type="number" id="altura" name="altura">
+            <br>
+            <br>
+            <br>
+
+            <button onclick="calcularImc()">Calcular</button>
+            <br>
+            <br>
+        </article>
+
+        <p class="resul">Seu índice de massa corporal é <span class="res" id="resultado"></span></p>
+
+
+
+        <script>
+            function calcularImc() {
+                const peso = window.document.getElementById('peso').value
+                const altura = window.document.getElementById('altura').value
+                const imc = peso / (altura ** 2)
+                document.getElementById('resultado').textContent = imc.toFixed(2)
+
+            }
+        </script>
+        <footer>Alexsandra Franchesca</footer>
+</body>
+
+</html>
